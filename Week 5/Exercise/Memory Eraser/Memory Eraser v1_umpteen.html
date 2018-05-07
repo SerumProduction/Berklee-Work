@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Memory Eraser</title>
+  </head>
+  <body>
+    <div>Click on an image to remove it.</div>
+    <div id="images">
+      <div id="img1">
+        <button id="foxy">
+          <img src="Foxy.jpg" id="foxyPic" height='300' width='300'>
+        </button>
+      </div>
+      <br/>
+      <div id="img2">
+        <button id="majestic">
+          <img src="Majestic.jpg" id="majesticPic" height='221' width='300'>
+        </button>
+      </div>
+      <br/>
+      <div id="img3">
+        <button id="doggo" onclick="this.parentNode.style.display = 'none';">
+          <img src="Doggo.jpg" id="doggoPic" height='109' width='300'>
+        </button>
+      </div>
+      <br/>
+      <div id="img4">
+        <button id="uncleBob">
+          <img src="Uncle Bob.jpg" id="uncleBobPic" height='225' width='300'>
+        </button>
+      </div>
+    </div>
+    <script language="javascript">
+      let button1 = document.getElementById('foxy'),
+          button2 = document.getElementById('majestic'),
+          button3 = document.getElementById('doggo'),
+          button4 = document.getElementById('uncleBob');
+      foxy.addEventListener('click', function() {
+        console.log("Foxy removed");
+        this.parentNode.style.display = 'none';
+        // foxy.style.opacity = "0";
+      });
+      majestic.addEventListener('click', function() {
+        console.log("Majestic removed");
+        this.parentNode.style.display = 'none';
+        // majestic.style.opacity = "0";
+      });
+      doggo.addEventListener('click', function() {
+        console.log("Doggo removed");
+        // this.parentNode.style.display = 'none';
+        // doggo.style.opacity = "0";
+      });
+      uncleBob.addEventListener('click', function() {
+        console.log("Uncle Bob removed");
+        // this.parentNode.style.display = 'none';
+        uncleBob.style.opacity = "0";
+      });
+    </script>
+  </body>
+</html>

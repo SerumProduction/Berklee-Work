@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Age Checker 4000</title>
+    <style>
+      button {
+        font-weight: bold;
+        margin: 1em;
+        padding: 1em;
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_container">
+      <div id="name_input">Name*: <input type="input" id="name" placeholder="Name"></div>
+      <div id="birth_date_input">Birth Date*: <input type="date" id="birthday" value=""></div>
+      <br/>
+      <div>
+        <button id="calculate">Press Me!</button>
+      </div>
+      <br/>
+      <div><span id="age"></span></div>
+    </div>
+    <script language="javascript">
+      let button = document.getElementById('calculate')
+      calculate.addEventListener('click', function() {
+        var test = "Hello, " + document.querySelector('#name').value + ". Your birthday is: ";
+        var Bdate = document.querySelector('#birthday').value;
+        var Bday = +new Date(Bdate);
+        test += Bdate + ". That makes you " + ~~ ((Date.now() - Bday) / (31557600000)) + "!";
+        age.innerHTML = test;
+      });
+    </script>
+  </body>
+</html>
